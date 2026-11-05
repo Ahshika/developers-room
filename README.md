@@ -43,7 +43,7 @@ Render the frames (resumable: finished frames are skipped), then encode them wit
 
 The Mixamo files (`blender/incoming`, `blender/*.fbx`) stay local and are git-ignored.
 
-Planned stable URL (QR destination): `https://ahshika.github.io/developers-room/` (not deployed yet).
+Stable URL (QR destination): `https://ahshika.github.io/developers-room/`.
 
 ## Requirements
 
@@ -148,10 +148,14 @@ Placeholders are built in `src/experience/environment/Room.ts` and `src/experien
 
 ## Deployment and QR
 
-These are not done yet (Phase 8). The plan:
+**Live:** https://ahshika.github.io/developers-room/ (repo `Ahshika/developers-room`).
 
-1. Create a new repo `Ahshika/developers-room`.
-2. Deploy it to GitHub Pages via Actions, with Vite `base: '/developers-room/'`.
-3. Generate the QR code **only after** the production URL serves the build.
+Every push to `main` runs lint, the unit tests and the build in GitHub Actions, then deploys `dist/` to GitHub Pages ([`.github/workflows/deploy.yml`](.github/workflows/deploy.yml)). Every push requires the owner's confirmation.
 
-Every push requires the owner's confirmation.
+The QR code is in [`qr/`](qr/), as `developers-room-qr.svg` for print and `developers-room-qr.png` (1024 px). To regenerate it from `experienceEntryUrl`, run the command below; it decodes the PNG to check it.
+
+```bash
+npm run qr
+```
+
+The QR points at the stable entry URL. To change the destination, edit `portfolioUrl` in the config; the QR stays the same.

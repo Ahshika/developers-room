@@ -1,0 +1,23 @@
+node_modules/
+dist/
+test-results/
+playwright-report/
+*.log
+.vite/
+# third-party reference material must never be committed
+reference/
+# personal Claude Code settings stay on this machine
+.claude/
+# Blender working files and renders are large and regenerable (tools/blender/*.py)
+blender/work/
+blender/renders/
+# Mixamo downloads stay local: Adobe's terms allow use in projects, not redistribution of raw files
+blender/incoming/
+blender/*.fbx
+# downloaded third-party sources (re-fetch with tools/fetch_polyhaven.py; manifest kept)
+blender/sources/*
+!blender/sources/polyhaven/
+blender/sources/polyhaven/*
+!blender/sources/polyhaven/manifest.json
+__pycache__/
+*.pyc

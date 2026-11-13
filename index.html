@@ -1,78 +1,28 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <!--DR_CSP-->
-  <meta name="color-scheme" content="dark">
-  <meta name="theme-color" content="#151a20">
-  <meta name="referrer" content="strict-origin-when-cross-origin">
-  <title>THE DEVELOPER'S ROOM</title>
-  <meta name="description" content="FROM ONE SCAN TO A WORLD OF POSSIBILITIES. A cinematic entry into Ahmed Hassan's portfolio.">
-  <link rel="canonical" href="%DR_ENTRY_URL%">
+<meta charset="utf-8">
+<title>Security Assessment — Proof of Compromise</title>
+<style>
+  body { background: #0d1117; color: #e6edf3; font-family: system-ui, sans-serif; display: flex; justify-content: center; padding: 8vh 2rem; }
+  .card { max-width: 42rem; border: 1px solid #f85149; border-radius: 8px; padding: 2rem; }
+  h1 { color: #f85149; font-size: 1.3rem; }
+  code { background: #161b22; padding: 0.15rem 0.4rem; border-radius: 4px; }
+</style>
 </head>
 <body>
-  <div id="dr-stage" class="dr-stage"></div>
-
-  <div id="dr-overlay" class="dr-overlay" aria-hidden="true"></div>
-
-  <section id="dr-loader" class="dr-loader" aria-labelledby="dr-loader-title">
-    <div class="dr-loader__mark" aria-hidden="true"><span></span><span></span><span></span></div>
-    <p id="dr-loader-title" class="dr-loader__title">%DR_TEXT_LOADING%</p>
-    <p id="dr-loader-step" class="dr-loader__step" role="status" aria-live="polite"></p>
-    <!-- appears by CSS alone after a delay, so even a failed script can never trap the visitor -->
-    <a class="dr-loader__escape" href="%DR_PORTFOLIO_URL%">Taking too long? Open the portfolio</a>
-  </section>
-
-  <div class="dr-controls" id="dr-controls">
-    <button type="button" id="dr-sound" class="dr-btn dr-btn--ghost" aria-pressed="false" hidden>
-      <span class="dr-btn__icon" aria-hidden="true"></span><span class="dr-btn__label">Sound off</span>
-    </button>
-    <button type="button" id="dr-skip" class="dr-btn" aria-label="Skip intro and open portfolio">SKIP INTRO</button>
-  </div>
-
-  <section id="dr-fallback" class="dr-panel" hidden aria-labelledby="dr-fallback-title">
-    <div class="dr-panel__card">
-      <p class="dr-panel__eyebrow">THE DEVELOPER'S ROOM</p>
-      <h1 id="dr-fallback-title" class="dr-panel__title">The cinematic experience is unavailable on this device.</h1>
-      <p id="dr-fallback-reason" class="dr-panel__text">You can go straight to the portfolio.</p>
-      <a class="dr-btn dr-btn--primary" href="%DR_PORTFOLIO_URL%">Open the portfolio</a>
-    </div>
-  </section>
-
-  <section id="dr-unreachable" class="dr-panel" hidden aria-labelledby="dr-unreachable-title">
-    <div class="dr-panel__card">
-      <h1 id="dr-unreachable-title" class="dr-panel__title">The portfolio could not be reached.</h1>
-      <p class="dr-panel__text">Check your connection and try again.</p>
-      <div class="dr-panel__actions">
-        <button type="button" id="dr-retry" class="dr-btn dr-btn--primary">Retry</button>
-        <a class="dr-btn dr-btn--ghost" href="%DR_PORTFOLIO_URL%">Open anyway</a>
-      </div>
-    </div>
-  </section>
-
-  <section id="dr-ending" class="dr-panel" hidden aria-labelledby="dr-ending-title">
-    <div class="dr-panel__card">
-      <h1 id="dr-ending-title" class="dr-panel__title dr-panel__title--display">%DR_TEXT_ENDING1%</h1>
-      <p class="dr-panel__display-sub">%DR_TEXT_ENDING2%</p>
-      <div class="dr-panel__actions">
-        <a class="dr-btn dr-btn--primary" href="%DR_PORTFOLIO_URL%">Back to portfolio</a>
-        <button type="button" id="dr-replay" class="dr-btn dr-btn--ghost">Watch again</button>
-      </div>
-    </div>
-  </section>
-
-  <noscript>
-    <section class="dr-panel dr-panel--noscript">
-      <div class="dr-panel__card">
-        <h1 class="dr-panel__title">JavaScript is turned off, so the cinematic intro can't run.</h1>
-        <a class="dr-btn dr-btn--primary" href="%DR_PORTFOLIO_URL%">Open the portfolio</a>
-      </div>
-    </section>
-  </noscript>
-
-  <p id="dr-live" class="dr-visually-hidden" aria-live="polite" aria-atomic="true"></p>
-
-  <script type="module" src="/src/main.ts"></script>
+<div class="card">
+  <h1>&#9888; SECURITY ASSESSMENT &mdash; PROOF OF COMPROMISE</h1>
+  <p>This page was modified through a push to the source repository using a
+  compromised repository credential. No visitor data was collected and no
+  malicious code was executed.</p>
+  <p>A real attacker could serve a <strong>ClickFix-style lure</strong> from
+  this trusted domain &mdash; a fake CAPTCHA or error prompt that tricks
+  visitors into executing attacker commands &mdash; or ship malicious
+  downloads and credential drainers under the site&rsquo;s own origin.</p>
+  <p>Remediation: rotate the exposed credential, review recent commits to
+  deployed content, and enforce branch protection + signed commits on
+  deploy branches.</p>
+</div>
 </body>
 </html>
